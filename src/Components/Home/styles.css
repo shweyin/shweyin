@@ -1,0 +1,31 @@
+.hello {
+  font-size: large;
+  padding: 0;
+}
+
+.name {
+  font-size: 5em;
+  padding: 0;
+}
+
+.software-developer {
+  font-size: 7em;
+  opacity: 0.3;
+  padding: 0;
+}
+
+.mycontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  height: calc(100vh - 55px);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=styles.css.map */

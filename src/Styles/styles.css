@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+body {
+  font-family: "Press Start 2P", Serif;
+  color: #ffffff;
+  background-color: #111111;
+  margin: 0;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+}
+/*# sourceMappingURL=styles.css.map */
