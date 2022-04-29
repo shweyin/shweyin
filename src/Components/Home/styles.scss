@@ -14,10 +14,62 @@
     padding: 0;
 }
 
-.mycontainer {
+.intro {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    height: calc(100vh - 55px);
+    height: 100vh;
     justify-content: flex-end;
+}
+
+.home-page {
+    display: flex;
+}
+
+.svg-graphic {
+    height: 100vh;
+}
+
+.svg-text {
+    font-size: 10px;
+}
+
+.svg-top-line {
+    animation: dropLine 0.5s ease forwards;
+    transform: translateY(-50%)
+}
+
+.svg-circle {
+        stroke-dasharray: 95;
+        stroke-dashoffset: 95;
+        animation: rotate 1s linear forwards 0.5s;
+        transform: rotate(268deg);
+        transform-box: fill-box;
+        transform-origin: center;
+}
+
+.svg-bottom-line {
+    animation: dropLine2 1s ease forwards 1.5s;
+    transform: translateY(100%)
+}
+
+@keyframes dropLine {
+    to {
+        transform: translateY(0)
+    }
+};
+
+@keyframes dropLine2 {   
+    to {
+        transform: translateY(0)
+    }
+};
+
+@keyframes rotate {
+    from {
+        stroke-dashoffset: 95;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
