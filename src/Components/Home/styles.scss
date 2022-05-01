@@ -29,6 +29,7 @@
 
 .intro {
     display: flex;
+    width: 50%;
     flex-grow: 2;
     flex-direction: column;
     gap: 1em;
@@ -38,15 +39,41 @@
 }
 
 .graphic {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+}
+
+.top-line {
+    width: 50%;
+    height: 30%;
+    border-right: solid 6px white;
+}
+
+.bottom-line {
+    flex-grow: 1;
+    width: 50%;
+    border-right: solid 6px white;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 15vw;
+    width: 15vw;
+    border: solid 6px white;
+    border-radius: 50%;
 }
 
 .home-page {
     display: flex;
+    width: 100%;
 }
 
-.svg-graphic {
-    height: 100vh;
-}
 
 .svg-text {
     font-size: 1px;

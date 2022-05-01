@@ -4,12 +4,16 @@ import {
     faChevronLeft,
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 import TextSwap from "../TextSwap/TextSwap";
 
 const Home = () => {
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+    setTimeout(() => setTime(new Date().toLocaleTimeString()), 1000);
+
     return (
         <div className="home-page">
             <div className="intro">
@@ -26,7 +30,17 @@ const Home = () => {
                 <FontAwesomeIcon icon={faCode} className="icon" />
             </div>
             <div className="graphic">
-                <svg viewBox="0 0 100 100" className="svg-graphic">
+                <div className="top-line"></div>
+                <div className="circle">
+                    <div>{new Date().toDateString()}</div>
+                    <div>{time}</div>
+                </div>
+                <div className="bottom-line"></div>
+                {/* <svg
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                    className="svg-graphic"
+                >
                     <line
                         className="svg-top-line"
                         x1="50"
@@ -59,7 +73,7 @@ const Home = () => {
                         y2="100"
                         stroke="white"
                     />
-                </svg>
+                </svg> */}
             </div>
         </div>
     );
