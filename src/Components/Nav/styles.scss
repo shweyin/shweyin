@@ -1,12 +1,11 @@
 @import '../../Styles/variables';
 
 nav {
-    height: 100vh;
     background-color: $nav-color;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0;
+    padding: 1em 0 0 0;
     margin: 0;
     list-style-type: none;    
 }

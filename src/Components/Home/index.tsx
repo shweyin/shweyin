@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import "./styles.css";
+import { motion } from "framer-motion";
 
 import TextSwap from "../TextSwap/TextSwap";
 
@@ -22,58 +23,61 @@ const Home = () => {
                     <FontAwesomeIcon icon={faChevronRight} className="icon" />
                 </span>
                 <TextSwap
-                    text1="Hi, my name is"
+                    text1="Hi, my name is..."
                     text2="こんにちは、僕の名前は"
+                    className=""
                 />
-                <div className="name">Shweyin Than</div>
-                <div className="software-developer">Software Developer</div>
+                <div className="name">
+                    <span>
+                        {"Shweyin ".split("").map((char, index) => (
+                            <span key={`${char}-${index}`} className="char">
+                                {char === " " ? "\u00A0" : char}
+                            </span>
+                        ))}
+                    </span>
+                    <span>
+                        {"Than".split("").map((char, index) => (
+                            <span key={`${char}-${index}`} className="char">
+                                {char === " " ? "\u00A0" : char}
+                            </span>
+                        ))}
+                    </span>
+                </div>
+                <div className="software-developer">
+                    <span>
+                        {"I build ".split("").map((char, index) => (
+                            <span key={`${char}-${index}`} className="char">
+                                {char === " " ? "\u00A0" : char}
+                            </span>
+                        ))}
+                    </span>
+                    <span>
+                        {"websites".split("").map((char, index) => (
+                            <span key={`${char}-${index}`} className="char">
+                                {char === " " ? "\u00A0" : char}
+                            </span>
+                        ))}
+                    </span>
+                </div>
                 <FontAwesomeIcon icon={faCode} className="icon" />
             </div>
             <div className="graphic">
-                <div className="top-line"></div>
+                <motion.div
+                    className="top-line"
+                    initial={{ y: "-100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ default: { duration: 1.5 } }}
+                ></motion.div>
                 <div className="circle">
                     <div>{new Date().toDateString()}</div>
                     <div>{time}</div>
                 </div>
-                <div className="bottom-line"></div>
-                {/* <svg
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                    className="svg-graphic"
-                >
-                    <line
-                        className="svg-top-line"
-                        x1="50"
-                        y1="0"
-                        x2="50"
-                        y2="25"
-                        stroke="white"
-                    />
-                    <circle
-                        className="svg-circle"
-                        r="15"
-                        cx="50"
-                        cy="40"
-                        fill="none"
-                        stroke="white"
-                    />
-                    <text
-                        className="svg-text"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                        x="50"
-                        y="40"
-                        fill="white"
-                    >{`${new Date().toDateString()}`}</text>
-                    <line
-                        className="svg-bottom-line"
-                        x1="50"
-                        y1="55"
-                        x2="50"
-                        y2="100"
-                        stroke="white"
-                    />
-                </svg> */}
+                <motion.div
+                    className="bottom-line"
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ default: { duration: 1.5 } }}
+                ></motion.div>
             </div>
         </div>
     );

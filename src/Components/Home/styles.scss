@@ -1,4 +1,6 @@
 @import '../../Styles/variables';
+@import '../../Styles/typography';
+@import "../../Styles/mixins";
 
 .japanese {
     font-size: 1em;
@@ -17,28 +19,54 @@
 }
 
 .name {
-    font-size: 3em;
+    font-size: clamp(1rem,
+        8vw,
+        4rem);;
     padding: 0;
+    margin: 0;
 }
 
 .software-developer {
-    font-size: 5em;
-    opacity: 0.3;
+    word-wrap: none;
+    font-size: clamp(1rem,
+    8vw,
+    4rem);
+    color: $secondary-text;
     padding: 0;
+    margin: 0;
+}
+
+.char {
+    display: inline-flex;
+    transition: all 0.2s;
+    &:hover {
+        transform: scale(1.3);
+    }
 }
 
 .intro {
     display: flex;
+    gap: 0.5em;
     width: 50%;
     flex-grow: 2;
     flex-direction: column;
-    gap: 1em;
     height: 100vh;
     justify-content: center;
     align-items: flex-start;
+    font-family: $header-font;
+    padding-left: 5%;
+
+    @include for-desktop-down {
+        justify-content: center;
+        align-items: center;
+    };
 }
 
 .graphic {
+    @include for-desktop-down {
+        display: none;
+    };
+
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -72,6 +100,8 @@
 .home-page {
     display: flex;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 

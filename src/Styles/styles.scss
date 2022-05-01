@@ -11,18 +11,6 @@ body {
 
 .App {
     display: flex;
-    flex-direction: row;
-    gap: 2em;
-}
-
-.work-in-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: white;
-    color: black;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
 }

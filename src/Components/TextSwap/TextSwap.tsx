@@ -5,17 +5,16 @@ import "./styles.css";
 type TextSwapProps = {
     text1: string;
     text2: string;
+    className: string;
 };
 
 const TextSwap = ({ text1, text2 }: TextSwapProps) => {
-    const [showFirst, setShowFirst] = useState(true);
-
     const sentence = {
         hidden: { opacity: 1 },
         visible: {
             opacity: 1,
             transition: {
-                delay: 0.1,
+                delay: 0.5,
                 staggerChildren: 0.08,
             },
         },
