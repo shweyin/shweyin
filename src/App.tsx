@@ -1,23 +1,18 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './Styles/styles.css';
-
-import Home from "../src/Components/Home";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import "./Styles/styles.css";
 import Nav from "../src/Components/Nav";
+import RoutesWrapper from "./Components/RoutesWrapper/RoutesWrapper";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <div className='work-in-progress'>Currently a work in progress! Come back in a few days :)</div> */}
-      <BrowserRouter>
-        <Nav /> 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<p>Not found</p>} />
-        </Routes>
-      </BrowserRouter>      
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Nav />
+                <RoutesWrapper />
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
