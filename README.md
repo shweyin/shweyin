@@ -1,5 +1,4 @@
 <h2> Hello! My name is Shweyin. </h2>
-<img align="right" alt="GIF" src="" width="500"/>
 
 <h3> 👨🏻‍💻 About Me </h3>
 
