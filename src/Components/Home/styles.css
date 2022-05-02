@@ -6,11 +6,6 @@
   font-weight: bold;
 }
 
-.icon {
-  color: #ffffff;
-  opacity: 0.4;
-}
-
 .english {
   font-size: 1em;
   padding: 0;
@@ -66,6 +61,11 @@
           align-items: flex-start;
   font-family: "Orbitron";
   padding-left: 5%;
+}
+
+.intro .brackets {
+  color: #ffffff;
+  opacity: 0.2;
 }
 
 @media (max-width: 1200px) {

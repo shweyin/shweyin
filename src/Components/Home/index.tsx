@@ -18,10 +18,7 @@ const Home = () => {
     return (
         <div className="home-page">
             <div className="intro">
-                <span>
-                    <FontAwesomeIcon icon={faChevronLeft} className="icon" />
-                    <FontAwesomeIcon icon={faChevronRight} className="icon" />
-                </span>
+                <span className="brackets">{"<div>"}</span>
                 <TextSwap
                     text1="Hi, my name is..."
                     text2="こんにちは、僕の名前は"
@@ -59,7 +56,7 @@ const Home = () => {
                         ))}
                     </span>
                 </div>
-                <FontAwesomeIcon icon={faCode} className="icon" />
+                <span className="brackets">{"</div>"}</span>
             </div>
             <div className="graphic">
                 <motion.div

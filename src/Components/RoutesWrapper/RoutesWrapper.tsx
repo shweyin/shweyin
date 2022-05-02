@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 //import {} from "framer-motion/dist/framer-motion";
 
 import Home from "../Home";
+import Profile from "../Profile/Profile";
 
 const RoutesWrapper = () => {
     const location = useLocation();
@@ -15,15 +16,23 @@ const RoutesWrapper = () => {
                     element={<SlideAnimation content={<Home />} />}
                 />
                 <Route
+                    path="/profile"
+                    element={<SlideAnimation content={<Profile />} />}
+                />
+                <Route
                     path="*"
-                    element={<SlideAnimation content={<Home />} />}
+                    element={<SlideAnimation content={<p>Not found</p>} />}
                 />
             </Routes>
         </AnimatePresence>
     );
 };
 
-const SlideAnimation = ({ content }) => (
+type SlideAnimationProps = {
+    content: React.ReactNode;
+};
+
+const SlideAnimation = ({ content }: SlideAnimationProps) => (
     <motion.div
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}

@@ -8,20 +8,43 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1em 0 0 0;
   margin: 0;
-  list-style-type: none;
+}
+
+.link {
+  color: white;
+  padding: 0 1em;
+}
+
+.link:hover {
+  opacity: 0.6;
 }
 
 .links {
-  color: white;
-  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
 }
 
-.links:hover {
-  opacity: 0.6;
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
 }
 /*# sourceMappingURL=styles.css.map */

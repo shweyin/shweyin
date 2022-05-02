@@ -8,11 +8,6 @@
     font-weight: bold;
 }
 
-.icon {
-    color: $text-color;
-    opacity: 0.4;
-}
-
 .english {
     font-size: 1em;
     padding: 0;
@@ -57,6 +52,11 @@
     align-items: flex-start;
     font-family: $header-font;
     padding-left: 5%;
+
+    .brackets {
+        color: $text-color;
+        opacity: 0.2;
+    }
 
     @include for-desktop-down {
         justify-content: center;
