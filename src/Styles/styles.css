@@ -15,4 +15,25 @@ body {
   margin: 0;
   overflow: hidden;
 }
+
+@media (max-width: 599px) {
+  .App {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.App ::-moz-selection {
+  background: #AFAFAF;
+}
+
+.App ::-webkit-selection {
+  background: #AFAFAF;
+}
+
+.App ::selection {
+  background: #AFAFAF;
+}
 /*# sourceMappingURL=styles.css.map */

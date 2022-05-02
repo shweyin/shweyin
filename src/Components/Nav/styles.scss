@@ -1,13 +1,38 @@
 @import '../../Styles/variables';
+@import "../../Styles/mixins";
 
-nav {
+.non-mobile {
     background-color: $nav-color;
     display: flex;
-    height: calc(100vh - 1em);
+    height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1em 0 0 0;
+    justify-content: space-between;    
     margin: 0;
+
+    @include for-phone-only {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 1em;
+        cursor: pointer; 
+        &:hover {
+           opacity: 0.5; 
+        }       
+    }
+
+    @include for-phone-only {
+        display: flex;
+    }
 }
 
 .link {
@@ -19,6 +44,7 @@ nav {
 }
 
 .links {
+    padding: 2em 0 0 0;
     display: flex;
     gap: 2em;
     flex-direction: column;
@@ -30,4 +56,42 @@ nav {
     flex-direction: column;
     list-style-type: none;
 
+}
+
+.drawer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: $text-color;
+    z-index: 1000;
+
+    button {
+        color: black;
+    }
+}
+
+.mobile-links {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.4;        
+    }
 }

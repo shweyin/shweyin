@@ -14,4 +14,20 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+
+    @include for-phone-only {
+        flex-direction: column;
+    }
+
+    ::-moz-selection {
+        background: #AFAFAF;
+    }
+    
+    ::-webkit-selection {
+        background: #AFAFAF;
+    }
+    
+    ::selection {
+        background: #AFAFAF;
+    }
 }
