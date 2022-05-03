@@ -1,0 +1,13 @@
+@import "../../Styles/mixins";
+
+.motionDiv {
+    height: 100%;
+    width: 100%;
+    //this is needed so that the fixed nav doesn't overlap with the content
+    margin-left: 50px;
+
+    //once the nav is hidden, get rid of the padding
+    @include for-phone-only {
+        margin-left: 0;
+    }
+}

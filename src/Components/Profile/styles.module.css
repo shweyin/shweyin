@@ -4,6 +4,7 @@
   display: flex;
   gap: 1em;
   padding: 1em;
+  min-height: calc(100vh - 2em);
 }
 
 @media (max-width: 900px) {
@@ -30,13 +31,15 @@ img {
   display: -ms-flexbox;
   display: flex;
   border-radius: 15px;
-  padding: 1em;
+  padding: 1.5em;
   background-color: #353535;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 @media (max-width: 900px) {
   .card {
-    width: calc(100% - 2em);
+    width: calc(100% - 3em);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -58,6 +61,7 @@ img {
 
 .header {
   font-size: 2em;
+  padding-bottom: 1em;
 }
 
 .hp {
@@ -74,7 +78,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 150px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -97,7 +103,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 150px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -115,6 +123,7 @@ img {
 
 .charClass {
   font-size: 1em;
+  padding-top: 0.5em;
 }
 
 .charInfo {
@@ -134,44 +143,45 @@ img {
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 0.8em;
+  padding-bottom: 2em;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  row-gap: 0.3em;
 }
 
-form .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.3em;
+@media (max-width: 900px) {
+  form {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
 }
 
-form .stat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5em;
+form .line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[auto-fit];
+      grid-template-columns: repeat(auto-fit);
+  padding: 0.5em;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+form .line label {
+  padding-bottom: 0.5em;
 }
 
 form input {
-  background-color: #5c5c5c;
-  border-color: #5c5c5c;
+  font-size: 1em;
+  background-color: #484848;
+  border-color: #484848;
   border-radius: 5px;
   color: #ffffff;
+  text-align: center;
   padding: 0.2em 0.5em;
 }
 

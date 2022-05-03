@@ -4,10 +4,12 @@
 .nonMobile {
     background-color: $nav-color;
     display: flex;
+    width: 50px;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;    
-    margin: 0;
+    justify-content: space-between;
+    margin-right: 50px;
+    position: fixed;
 
     @include for-phone-only {
         display: none;

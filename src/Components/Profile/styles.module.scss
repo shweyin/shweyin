@@ -5,6 +5,7 @@
     display: flex;
     gap: 1em;
     padding: 1em;
+    min-height: calc(100vh - 2em);
     @include for-tablet-landscape-down {
         flex-direction: column;
         align-items: center;
@@ -18,11 +19,11 @@ img {
 }
 
 .card {
-    @include make-card;
-    
+    @include make-card(1.5em);
+    align-self: baseline;
     
     @include for-tablet-landscape-down {
-        width: calc(100% - 2em);
+        width: calc(100% - 3em);
         justify-content: center;
     }
 }
@@ -35,6 +36,7 @@ img {
 
 .header {
     font-size: 2em;
+    padding-bottom: 1em;
 }
 
 .name {
@@ -47,7 +49,7 @@ img {
     
     span {
         display: flex;
-        width: 150px;
+        flex-grow: 1;
         justify-content: center;
         margin-left: 1em;
         background-color: $color;
@@ -73,6 +75,7 @@ img {
 
 .charClass {
     font-size: 1em;
+    padding-top: 0.5em;
 }
 
 .charInfo {
@@ -83,33 +86,42 @@ img {
 }
 
 form {
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: space-around;
-    font-size: 0.8em;
+    padding-bottom: 2em;
+    grid-template-columns: 50% 50%;
+    row-gap: 0.3em;
 
-    .column {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3em;
+    @include for-tablet-landscape-down {
+        grid-template-columns: 100%;
     }
 
-    .stat {
-        display: flex;
-        gap: 0.5em;
+    .line {
+        display: grid;
+        //grid-template-columns: 45% 45%;
+        grid-template-columns: repeat(auto-fit);
+        padding: 0.5em;
+        text-align: center;
         align-items: center;
-        justify-content: space-between;
+
+        label {
+            padding-bottom: 0.5em;
+        }
     }
 
     input {
-        background-color: $nav-color;
-        border-color: $nav-color;
+        font-size: 1em;
+        background-color: $tertiary-background;
+        border-color: $tertiary-background;
         border-radius: 5px;
         color: $text-color;
+        text-align: center;
         padding: 0.2em 0.5em;
         &:focus {
             outline: $outline-color solid 2px;
             color: $outline-color;
         }
     }
+
+    
 }

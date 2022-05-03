@@ -1,9 +1,9 @@
 @import "./variables";
 
-@mixin make-card {
+@mixin make-card($padding: 1em) {
     display: flex;
     border-radius: 15px;
-    padding: 1em;
+    padding: $padding;
     background-color: $secondary-background;
     @content;
 }

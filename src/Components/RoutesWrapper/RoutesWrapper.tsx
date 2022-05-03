@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import styles from "./styles.module.css";
 //import {} from "framer-motion/dist/framer-motion";
 
 import Home from "../Home";
@@ -34,10 +35,10 @@ type SlideAnimationProps = {
 
 const SlideAnimation = ({ content }: SlideAnimationProps) => (
     <motion.div
+        className={styles.motionDiv}
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "-100%" }}
-        style={{ height: "100%", width: "100%" }}
     >
         {content}
     </motion.div>

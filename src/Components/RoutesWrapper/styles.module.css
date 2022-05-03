@@ -1,0 +1,12 @@
+.motionDiv {
+  height: 100%;
+  width: 100%;
+  margin-left: 50px;
+}
+
+@media (max-width: 599px) {
+  .motionDiv {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=styles.module.css.map */
