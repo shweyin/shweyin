@@ -26,7 +26,7 @@ const Nav = () => {
                     <Link className={styles.link} to="/profile">
                         <FontAwesomeIcon icon={faUser} />
                     </Link>
-                    <Link className={styles.link} to="/notfound">
+                    <Link className={styles.link} to="/projects">
                         <FontAwesomeIcon icon={faFolderTree} />
                     </Link>
                 </div>

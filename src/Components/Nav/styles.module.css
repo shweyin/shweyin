@@ -85,6 +85,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   list-style-type: none;
+  padding-bottom: .5em;
 }
 
 .drawer {

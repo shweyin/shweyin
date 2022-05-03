@@ -2,13 +2,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1em;
   padding: 1em;
   min-height: calc(100vh - 2em);
 }
 
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
 @media (max-width: 900px) {
-  .profilePage {
+  .top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -33,8 +44,6 @@ img {
   border-radius: 15px;
   padding: 1.5em;
   background-color: #353535;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
 }
 
 @media (max-width: 900px) {
@@ -176,7 +185,7 @@ form .line label {
 }
 
 form input {
-  font-size: 1em;
+  font-size: 0.8em;
   background-color: #484848;
   border-color: #484848;
   border-radius: 5px;
@@ -188,5 +197,21 @@ form input {
 form input:focus {
   outline: #9b9b9b solid 2px;
   color: #9b9b9b;
+}
+
+@media (min-width: 1200px) {
+  form input {
+    font-size: 1em;
+  }
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=styles.module.css.map */

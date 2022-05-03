@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 
 import Home from "../Home";
 import Profile from "../Profile/Profile";
+import Projects from "../Projects/Projects";
 
 const RoutesWrapper = () => {
     const location = useLocation();
@@ -19,6 +20,10 @@ const RoutesWrapper = () => {
                 <Route
                     path="/profile"
                     element={<SlideAnimation content={<Profile />} />}
+                />
+                <Route
+                    path="/projects"
+                    element={<SlideAnimation content={<Projects />} />}
                 />
                 <Route
                     path="*"

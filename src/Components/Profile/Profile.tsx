@@ -27,8 +27,8 @@ const Profile = () => {
     ];
 
     return (
-        <div style={{ flexGrow: 1 }}>
-            <div className={styles.profilePage}>
+        <div className={styles.profilePage}>
+            <div className={styles.top}>
                 <div className={styles.card}>
                     <div className={styles.character}>
                         <div className={styles.name + " " + styles.header}>
@@ -65,11 +65,14 @@ const Profile = () => {
                             </div>
                         ))}
                     </form>
-                    <div className={styles.header}>Skills</div>
-                    <div style={{ opacity: 0.5, padding: "2em" }}>
-                        {" "}
-                        Coming Soon...
-                    </div>
+                </div>
+            </div>
+
+            <div className={styles.skills + " " + styles.card}>
+                <div className={styles.header}>Skills</div>
+                <div style={{ opacity: 0.5, padding: "2em" }}>
+                    {" "}
+                    Coming Soon...
                 </div>
             </div>
         </div>

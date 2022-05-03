@@ -3,9 +3,17 @@
 
 .profilePage {
     display: flex;
+    flex-direction: column;
     gap: 1em;
     padding: 1em;
     min-height: calc(100vh - 2em);
+    
+}
+
+.top {
+    display: flex;
+    gap: 1em;
+
     @include for-tablet-landscape-down {
         flex-direction: column;
         align-items: center;
@@ -20,7 +28,6 @@ img {
 
 .card {
     @include make-card(1.5em);
-    align-self: baseline;
     
     @include for-tablet-landscape-down {
         width: calc(100% - 3em);
@@ -110,7 +117,7 @@ form {
     }
 
     input {
-        font-size: 1em;
+        font-size: 0.8em;
         background-color: $tertiary-background;
         border-color: $tertiary-background;
         border-radius: 5px;
@@ -121,7 +128,14 @@ form {
             outline: $outline-color solid 2px;
             color: $outline-color;
         }
-    }
 
-    
+        @include for-desktop-up {
+            font-size: 1em;
+        }
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
 }
