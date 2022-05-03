@@ -75,6 +75,10 @@ const Profile = () => {
                     </div>
                 </form>
                 <div className={styles.header}>Skills</div>
+                <div style={{ opacity: 0.5, padding: "2em" }}>
+                    {" "}
+                    Coming Soon...
+                </div>
             </div>
         </div>
     );
