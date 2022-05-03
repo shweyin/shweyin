@@ -1,4 +1,4 @@
-.non-mobile {
+.nonMobile {
   background-color: #5c5c5c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 599px) {
-  .non-mobile {
+  .nonMobile {
     display: none;
   }
 }
@@ -109,7 +109,7 @@
   color: black;
 }
 
-.mobile-links {
+.mobileLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +130,7 @@
           align-items: center;
 }
 
-.mobile-link {
+.mobileLink {
   color: black;
   text-decoration: none;
   font-size: 1.5em;
@@ -138,7 +138,7 @@
   transition: 0.3s;
 }
 
-.mobile-link:hover {
+.mobileLink:hover {
   opacity: 0.4;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.module.css.map */

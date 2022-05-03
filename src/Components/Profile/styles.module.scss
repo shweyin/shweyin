@@ -1,0 +1,115 @@
+@import "../../Styles/variables";
+@import "../../Styles/mixins";
+
+.profilePage {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    @include for-tablet-landscape-down {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+img {
+    height: clamp(300px, 40vw, 600px);
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.card {
+    @include make-card;
+    
+    
+    @include for-tablet-landscape-down {
+        width: calc(100% - 2em);
+        justify-content: center;
+    }
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    font-size: 2em;
+}
+
+.name {
+}
+
+@mixin hp-bar($color) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    
+    span {
+        display: flex;
+        width: 150px;
+        justify-content: center;
+        margin-left: 1em;
+        background-color: $color;
+        border-radius: 3px;
+    }
+
+}
+
+.hp {
+    @include hp-bar(#ff2f2f);
+}
+.mp {
+    @include hp-bar(#3a3ae1);
+}
+
+.level {
+    background-color: #919191;
+    border-radius: 5px;
+    padding: 0 0.3em;
+    margin-right: 0.2em;
+
+}
+
+.charClass {
+    font-size: 1em;
+}
+
+.charInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;   
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 0.8em;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+    }
+
+    .stat {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    input {
+        background-color: $nav-color;
+        border-color: $nav-color;
+        border-radius: 5px;
+        color: $text-color;
+        padding: 0.2em 0.5em;
+        &:focus {
+            outline: $outline-color solid 2px;
+            color: $outline-color;
+        }
+    }
+}

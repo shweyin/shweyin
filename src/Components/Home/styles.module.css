@@ -18,7 +18,7 @@
   text-shadow: 6px 6px 0px #464646;
 }
 
-.software-developer {
+.softwareDeveloper {
   word-wrap: none;
   font-size: clamp(1rem, 8vw, 4rem);
   color: #747474;
@@ -98,13 +98,13 @@
   }
 }
 
-.top-line {
+.topLine {
   width: 50%;
   height: 30%;
   border-right: solid 6px white;
 }
 
-.bottom-line {
+.bottomLine {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -133,7 +133,7 @@
   border-radius: 50%;
 }
 
-.home-page {
+.homePage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,80 +142,4 @@
   margin: 0;
   overflow: hidden;
 }
-
-.svg-text {
-  font-size: 1px;
-}
-
-.svg-top-line {
-  -webkit-animation: dropLine 0.5s ease forwards;
-          animation: dropLine 0.5s ease forwards;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.svg-circle {
-  stroke-dasharray: 95;
-  stroke-dashoffset: 95;
-  -webkit-animation: rotate 1s linear forwards 0.5s;
-          animation: rotate 1s linear forwards 0.5s;
-  -webkit-transform: rotate(268deg);
-          transform: rotate(268deg);
-  transform-box: fill-box;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.svg-bottom-line {
-  -webkit-animation: dropLine2 1s ease forwards 1.5s;
-          animation: dropLine2 1s ease forwards 1.5s;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-
-@-webkit-keyframes dropLine {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes dropLine {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes dropLine2 {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes dropLine2 {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes rotate {
-  from {
-    stroke-dashoffset: 95;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes rotate {
-  from {
-    stroke-dashoffset: 95;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.module.css.map */

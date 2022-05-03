@@ -5,7 +5,7 @@ import {
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 
 import TextSwap from "../TextSwap/TextSwap";
@@ -16,15 +16,15 @@ const Home = () => {
     setTimeout(() => setTime(new Date().toLocaleTimeString()), 1000);
 
     return (
-        <div className="home-page">
-            <div className="intro">
-                <span className="brackets">{"<div>"}</span>
+        <div className={styles.homePage}>
+            <div className={styles.intro}>
+                <span className={styles.brackets}>{"<div>"}</span>
                 <TextSwap
                     text1="Hi, my name is..."
                     text2="こんにちは、僕の名前は"
                     className=""
                 />
-                <div className="name">
+                <div className={styles.name}>
                     <span>
                         {"Shweyin ".split("").map((char, index) => (
                             <span key={`${char}-${index}`} className="char">
@@ -40,7 +40,7 @@ const Home = () => {
                         ))}
                     </span>
                 </div>
-                <div className="software-developer">
+                <div className={styles.softwareDeveloper}>
                     <span>
                         {"I build ".split("").map((char, index) => (
                             <span key={`${char}-${index}`} className="char">
@@ -56,21 +56,21 @@ const Home = () => {
                         ))}
                     </span>
                 </div>
-                <span className="brackets">{"</div>"}</span>
+                <span className={styles.brackets}>{"</div>"}</span>
             </div>
-            <div className="graphic">
+            <div className={styles.graphic}>
                 <motion.div
-                    className="top-line"
+                    className={styles.topLine}
                     initial={{ y: "-100%" }}
                     animate={{ y: 0 }}
                     transition={{ default: { duration: 1.5 } }}
                 ></motion.div>
-                <div className="circle">
+                <div className={styles.circle}>
                     <div>{new Date().toDateString()}</div>
                     <div>{time}</div>
                 </div>
                 <motion.div
-                    className="bottom-line"
+                    className={styles.bottomLine}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ default: { duration: 1.5 } }}

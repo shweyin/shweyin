@@ -1,3 +1,13 @@
+@import "./variables";
+
+@mixin make-card {
+    display: flex;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: $secondary-background;
+    @content;
+}
+
 $phone-width: 599px;
 $tablet-portait: 600px;
 $tablet-landscape: 900px;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import styles from "./styles.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,46 +18,46 @@ const Nav = () => {
 
     return (
         <nav>
-            <div className="non-mobile">
-                <div className="links">
-                    <Link className="link" to="/">
+            <div className={styles.nonMobile}>
+                <div className={styles.links}>
+                    <Link className={styles.link} to="/">
                         <FontAwesomeIcon icon={faHouse} />
                     </Link>
-                    <Link className="link" to="/profile">
+                    <Link className={styles.link} to="/profile">
                         <FontAwesomeIcon icon={faUser} />
                     </Link>
-                    <Link className="link" to="/notfound">
+                    <Link className={styles.link} to="/notfound">
                         <FontAwesomeIcon icon={faFolderTree} />
                     </Link>
                 </div>
-                <div className="socials">
+                <div className={styles.socials}>
                     <a
-                        className="link"
+                        className={styles.link}
                         target="_blank"
                         href="https://github.com/shweyin"
                     >
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                     <a
-                        className="link"
+                        className={styles.link}
                         target="_blank"
                         href="https://www.linkedin.com/in/shweyin-than-656153130/"
                     >
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a className="link" href="mailto:shweyin@gmail.com">
+                    <a className={styles.link} href="mailto:shweyin@gmail.com">
                         <FontAwesomeIcon icon={faEnvelope} />
                     </a>
                 </div>
             </div>
-            <div className="mobile">
+            <div className={styles.mobile}>
                 <button onClick={() => setDrawerOpen(!drawerOpen)}>
                     <FontAwesomeIcon className="fa-2xl" icon={faBars} />
                 </button>
                 {drawerOpen && (
                     <AnimatePresence exitBeforeEnter>
                         <motion.div
-                            className="drawer"
+                            className={styles.drawer}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -69,16 +69,22 @@ const Nav = () => {
                                 />
                             </button>
                             <div
-                                className="mobile-links"
+                                className={styles.mobileLinks}
                                 onClick={() => setDrawerOpen(false)}
                             >
-                                <Link className="mobile-link" to="/">
+                                <Link className={styles.mobileLink} to="/">
                                     Home
                                 </Link>
-                                <Link className="mobile-link" to="/profile">
+                                <Link
+                                    className={styles.mobileLink}
+                                    to="/profile"
+                                >
                                     Profile
                                 </Link>
-                                <Link className="mobile-link" to="/notfound">
+                                <Link
+                                    className={styles.mobileLink}
+                                    to="/notfound"
+                                >
                                     Projects
                                 </Link>
                             </div>
