@@ -119,7 +119,8 @@ form {
     input {
         font-size: 0.8em;
         background-color: $tertiary-background;
-        border-color: $tertiary-background;
+        border: none;
+        //border-color: $tertiary-background;
         border-radius: 5px;
         color: $text-color;
         text-align: center;

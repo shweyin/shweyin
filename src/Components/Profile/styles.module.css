@@ -187,7 +187,7 @@ form .line label {
 form input {
   font-size: 0.8em;
   background-color: #484848;
-  border-color: #484848;
+  border: none;
   border-radius: 5px;
   color: #ffffff;
   text-align: center;
