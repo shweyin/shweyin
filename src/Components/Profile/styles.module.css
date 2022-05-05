@@ -155,6 +155,7 @@ form {
   display: -ms-grid;
   display: grid;
   width: 100%;
+  max-width: 1200px;
   padding-bottom: 2em;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;

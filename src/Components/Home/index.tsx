@@ -1,10 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faCode,
-    faChevronLeft,
-    faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 
@@ -12,8 +7,13 @@ import TextSwap from "../TextSwap/TextSwap";
 
 const Home = () => {
     const [time, setTime] = useState(new Date().toLocaleTimeString());
+    const [showEnter, setShowEnter] = useState(false);
 
     setTimeout(() => setTime(new Date().toLocaleTimeString()), 1000);
+
+    useEffect(() => {
+        setTimeout(() => setShowEnter(true), 2000);
+    }, []);
 
     return (
         <div className={styles.homePage}>
@@ -76,6 +76,13 @@ const Home = () => {
                     transition={{ default: { duration: 1.5 } }}
                 ></motion.div>
             </div>
+            {showEnter && (
+                <div className={styles.enter}>
+                    <Link to="/profile" className={styles.link}>
+                        Enter
+                    </Link>
+                </div>
+            )}
         </div>
     );
 };

@@ -95,6 +95,7 @@ img {
 form {
     display: grid;
     width: 100%;
+    max-width: 1200px;
     padding-bottom: 2em;
     grid-template-columns: 50% 50%;
     row-gap: 0.3em;

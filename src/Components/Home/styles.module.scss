@@ -61,6 +61,7 @@
     @include for-desktop-down {
         justify-content: center;
         align-items: center;
+        padding: 0;
     };
 }
 
@@ -108,23 +109,41 @@
     overflow: hidden;
 }
 
-// @keyframes dropLine {
-//     to {
-//         transform: translateY(0)
-//     }
-// };
+.enter {
+    position: absolute;
+    padding-bottom: 10vh;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1s infinite;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
 
-// @keyframes dropLine2 {   
-//     to {
-//         transform: translateY(0)
-//     }
-// };
+.link {
+    text-decoration: none;
+    color: $text-color;
+    padding: 1em;
+    &:hover {
+        opacity: 0.5;
+        
+    }
+}
 
-// @keyframes rotate {
-//     from {
-//         stroke-dashoffset: 95;
-//     }
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -10%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translate(-50%, 0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    100% {
+        transform: translate(-50%, -10%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}

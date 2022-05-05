@@ -76,6 +76,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
   }
 }
 
@@ -141,5 +142,73 @@
   padding: 0;
   margin: 0;
   overflow: hidden;
+}
+
+.enter {
+  position: absolute;
+  padding-bottom: 10vh;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
+.enter:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1em;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
 }
 /*# sourceMappingURL=styles.module.css.map */

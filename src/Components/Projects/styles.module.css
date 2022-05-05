@@ -1,4 +1,20 @@
 .projectsPage {
   padding: 1em;
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #353535;
 }
 /*# sourceMappingURL=styles.module.css.map */

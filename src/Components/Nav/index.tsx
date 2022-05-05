@@ -83,7 +83,7 @@ const Nav = () => {
                                 </Link>
                                 <Link
                                     className={styles.mobileLink}
-                                    to="/notfound"
+                                    to="/projects"
                                 >
                                     Projects
                                 </Link>
