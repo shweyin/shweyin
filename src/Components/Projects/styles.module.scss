@@ -1,12 +1,58 @@
 @import "../../Styles/mixins";
+@import "../../Styles/variables";
 
 .projectsPage {
     padding: 1em;    
     margin: 1em;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    div {
+        background-color: $tertiary-background;
+        &:hover {
+            opacity: 0.5;
+        }
+    }    
+}
+
+.projectPanel {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+
+    @include for-tablet-landscape-down {
+        flex-direction: column;
+    }
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 50%;
 }
 
 .card {
     @include make-card;
 }
+
+// div {
+//     outline: solid 1px white;
+// }

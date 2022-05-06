@@ -2,7 +2,6 @@
 
 @mixin make-card($padding: 1em) {
     display: flex;
-    border-radius: 15px;
     padding: $padding;
     background-color: $secondary-background;
     @content;
