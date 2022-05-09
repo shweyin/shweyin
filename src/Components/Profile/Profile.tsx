@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Sprite from "../../Assets/sprite.png";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, AnimatePresence } from "framer-motion";
+import { scaleCorrectors } from "framer-motion/types/projection/styles/scale-correction";
 
 const Profile = () => {
     const charInfo = [
@@ -27,10 +31,19 @@ const Profile = () => {
     ];
 
     const skills = [
-        { title: "Frontend", value: 80, color: "#3a3ae1" },
-        { title: "Backend", value: 70, color: "#3e8c3e" },
-        { title: "Wordpress", value: 65, color: "#ff2f2f" },
+        { title: "Frontend", value: 80, color: "#3a3ae1", id: "frontend" },
+        { title: "Backend", value: 70, color: "#3e8c3e", id: "backend" },
+        { title: "Wordpress", value: 65, color: "#ff2f2f", id: "wordpress" },
     ];
+
+    const [skillDowns, setSkillDowns] = useState({
+        frontend: {
+            skills: "React, Javascript, HTML, SCSS, TailwindCSS",
+            show: false,
+        },
+        backend: { skills: "C++, Python, Java, Firebase, SQL", show: false },
+        wordpress: { skills: "Oxygen", show: false },
+    });
 
     return (
         <div className={styles.profilePage}>
@@ -82,7 +95,50 @@ const Profile = () => {
                                 >
                                     <label className={styles.skillBarTitle}>
                                         {item.title}
+                                        <button
+                                            onClick={() =>
+                                                setSkillDowns({
+                                                    ...skillDowns,
+                                                    [item.id]: {
+                                                        ...skillDowns[item.id],
+                                                        show: !skillDowns[
+                                                            item.id
+                                                        ].show,
+                                                    },
+                                                })
+                                            }
+                                        >
+                                            {skillDowns[item.id].show ? (
+                                                <FontAwesomeIcon
+                                                    icon={faCaretUp}
+                                                />
+                                            ) : (
+                                                <FontAwesomeIcon
+                                                    icon={faCaretDown}
+                                                />
+                                            )}
+                                        </button>
                                     </label>
+
+                                    <AnimatePresence exitBeforeEnter>
+                                        {skillDowns[item.id].show && (
+                                            <motion.div
+                                                key={item.id}
+                                                initial={{ scaleY: 0 }}
+                                                animate={{ scaleY: 1 }}
+                                                exit={{ scaleY: 0 }}
+                                                style={{ originY: 0 }}
+                                                transition={{
+                                                    duration: 0.1,
+                                                    type: "tween",
+                                                    ease: "linear",
+                                                }}
+                                            >
+                                                {skillDowns[item.id].skills}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
                                     <div
                                         className={styles.skillBarWrapper}
                                         style={{

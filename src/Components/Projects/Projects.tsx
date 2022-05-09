@@ -11,7 +11,7 @@ type project = {
 
 const projects: project[] = [
     {
-        name: "Leadership LoomLeadership LoomLeadership LoomLeadership LoomLeadership Loom",
+        name: "Leadership Loom",
         details: "1",
         link: "/",
     },
@@ -25,7 +25,7 @@ const Projects = () => {
 
     return (
         <div className={styles.projectsPage + " " + styles.card}>
-            <h1>Quest Log / Projects</h1>
+            <h1>Quests / Projects</h1>
             <div className={styles.projectPanel}>
                 <div className={styles.projectList}>
                     <h2>Name</h2>
@@ -35,12 +35,12 @@ const Projects = () => {
                                 key={`${item.name}-${index}`}
                                 onClick={() => setActiveProject(item)}
                             >
-                                <div>{item.name}</div>
+                                {item.name}
                             </li>
                         ))}
                     </ul>
                 </div>
-                <div className={styles.projectDetails}>
+                {/* <div className={styles.projectDetails}>
                     <div>
                         <h2>Details</h2>
                         <div>{activeProject?.details}</div>
@@ -49,7 +49,7 @@ const Projects = () => {
                         <h2>Preview</h2>
                         <div>{activeProject?.link}</div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

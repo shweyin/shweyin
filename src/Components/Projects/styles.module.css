@@ -10,7 +10,7 @@
           flex-direction: column;
 }
 
-h1, h2 {
+h1 {
   text-align: center;
 }
 
@@ -19,11 +19,12 @@ ul {
   padding: 0;
 }
 
-li div {
-  background-color: #484848;
+li {
+  padding: .3em 0;
 }
 
-li div:hover {
+li:hover {
+  background-color: #484848;
   opacity: 0.5;
 }
 
@@ -73,13 +74,14 @@ li div:hover {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-height: 50%;
+  background-color: #484848;
 }
 
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1em;
+  padding: 1.5em;
   background-color: #353535;
 }
 /*# sourceMappingURL=styles.module.css.map */

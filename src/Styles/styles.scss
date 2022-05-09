@@ -31,3 +31,15 @@ body {
         background: #AFAFAF;
     }
 }
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
