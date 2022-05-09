@@ -34,3 +34,13 @@
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
 }
+
+@keyframes growWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }    
+}

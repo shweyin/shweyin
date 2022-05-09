@@ -146,8 +146,7 @@
 
 .enter {
   position: absolute;
-  padding-bottom: 10vh;
-  bottom: 0;
+  bottom: 20vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

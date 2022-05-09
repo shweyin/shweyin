@@ -1,18 +1,19 @@
 @import "../../Styles/variables";
 @import "../../Styles/mixins";
+@import "../../Styles/animations";
 
 .profilePage {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 1em;
+    padding: 1.5em;
     min-height: calc(100vh - 2em);
     
 }
 
 .top {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
 
     @include for-tablet-landscape-down {
         flex-direction: column;
@@ -35,6 +36,15 @@ img {
     }
 }
 
+.cardShrink {
+    align-self: baseline;
+    @include make-card(1.5em);    
+    @include for-tablet-landscape-down {
+        width: calc(100% - 3em);
+        justify-content: center;
+    }
+}
+
 .character {
     display: flex;
     flex-direction: column;
@@ -44,9 +54,7 @@ img {
 .header {
     font-size: 2em;
     padding-bottom: 1em;
-}
-
-.name {
+    text-align: center;
 }
 
 @mixin hp-bar($color) {
@@ -140,4 +148,31 @@ form {
 .skills {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.skillBars {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillBarContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.skillBarWrapper {
+    display: flex;
+    margin: 1em 0;
+}
+
+.skillBar {
+    display: flex;
+    justify-content: center;
+    animation: growWidth 2s ease-in-out;
+    height: 10px;
+    width: 100%;
+}
+.skillBarTitle {
 }

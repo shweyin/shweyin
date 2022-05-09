@@ -26,15 +26,21 @@ const Profile = () => {
         { label: "Wisdom", value: "66" },
     ];
 
+    const skills = [
+        { title: "Frontend", value: 80, color: "#3a3ae1" },
+        { title: "Backend", value: 70, color: "#3e8c3e" },
+        { title: "Wordpress", value: 65, color: "#ff2f2f" },
+    ];
+
     return (
         <div className={styles.profilePage}>
             <div className={styles.top}>
-                <div className={styles.card}>
+                <div className={styles.cardShrink}>
                     <div className={styles.character}>
-                        <div className={styles.name + " " + styles.header}>
+                        <div className={`${styles.name} ${styles.header}`}>
                             Shweyin Than
                         </div>
-                        <img src={Sprite} />
+                        <img src={Sprite} alt="Shweyin Than Character Sprite" />
                         <div className={styles.status}>
                             <div className={styles.hp}>
                                 HP: <span>100 / 100</span>
@@ -52,7 +58,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className={styles.charInfo + " " + styles.card}>
+                <div className={`${styles.charInfo} ${styles.card}`}>
                     <div className={styles.header}>Stats</div>
                     <form>
                         {charInfo.map((item, index) => (
@@ -65,14 +71,35 @@ const Profile = () => {
                             </div>
                         ))}
                     </form>
-                </div>
-            </div>
 
-            <div className={styles.skills + " " + styles.card}>
-                <div className={styles.header}>Skills</div>
-                <div style={{ opacity: 0.5, padding: "2em" }}>
-                    {" "}
-                    Coming Soon...
+                    <div className={`${styles.skills} ${styles.card}`}>
+                        <div className={styles.header}>Skills</div>
+                        <div className={styles.skillBars}>
+                            {skills.map((item, index) => (
+                                <div
+                                    className={styles.skillBarContainer}
+                                    key={`${item.title}-${index}`}
+                                >
+                                    <label className={styles.skillBarTitle}>
+                                        {item.title}
+                                    </label>
+                                    <div
+                                        className={styles.skillBarWrapper}
+                                        style={{
+                                            width: `${item.value}%`,
+                                        }}
+                                    >
+                                        <span
+                                            className={styles.skillBar}
+                                            style={{
+                                                backgroundColor: item.color,
+                                            }}
+                                        ></span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
