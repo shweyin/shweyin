@@ -139,6 +139,7 @@ img {
   display: flex;
   padding: 1.5em;
   background-color: #353535;
+  border-radius: 5px;
 }
 
 @media (max-width: 900px) {
@@ -158,6 +159,7 @@ img {
   display: flex;
   padding: 1.5em;
   background-color: #353535;
+  border-radius: 5px;
 }
 
 @media (max-width: 900px) {

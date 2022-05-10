@@ -2,10 +2,12 @@
 @import "../../Styles/variables";
 
 .projectsPage {
-    padding: 1em;    
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
+    min-height: calc(100vh - 2em);
+    width: 100%;
+}
+
+.projectPanel {
+    margin: 1.5em;
 }
 
 h1 {
@@ -26,34 +28,8 @@ li {
     }
 }
 
-.projectPanel {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-
-    @include for-tablet-landscape-down {
-        flex-direction: column;
-    }
-}
-
-.projectList {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.projectDetails {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    max-height: 50%;
-    background-color: $tertiary-background;
-}
-
 .card {
+    display: flex;
+    flex-direction: column;
     @include make-card(1.5em);
 }
-
-// div {
-//     outline: solid 1px white;
-// }

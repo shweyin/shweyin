@@ -4,6 +4,7 @@
     display: flex;
     padding: $padding;
     background-color: $secondary-background;
+    border-radius: 5px;
     @content;
 }
 

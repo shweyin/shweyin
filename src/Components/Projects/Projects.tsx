@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import CustomModal from "../CustomModal/CustomModal";
 
 type project = {
     name: string;
@@ -12,45 +13,48 @@ type project = {
 const projects: project[] = [
     {
         name: "Leadership Loom",
-        details: "1",
+        details: "Coming Soon...",
         link: "/",
     },
-    { name: "Mamacre", details: "2", link: "/" },
-    { name: "SACHAYS", details: "3", link: "/" },
-    { name: "My Portfolio", details: "4", link: "/" },
+    { name: "Mamacre", details: "Coming Soon...", link: "/" },
+    { name: "SACHAYS", details: "Coming Soon...", link: "/" },
+    { name: "My Portfolio", details: "Coming Soon...", link: "/" },
 ];
 
 const Projects = () => {
     const [activeProject, setActiveProject] = useState<project>(projects[0]);
+    const [showModal, setShowModal] = useState(false);
+
+    const toggleModal = (item: project) => {
+        setActiveProject(item);
+        setShowModal(!showModal);
+    };
 
     return (
-        <div className={styles.projectsPage + " " + styles.card}>
-            <h1>Quests / Projects</h1>
-            <div className={styles.projectPanel}>
+        <div className={styles.projectsPage}>
+            <div className={`${styles.card} ${styles.projectPanel}`}>
+                <h1>Projects</h1>
                 <div className={styles.projectList}>
                     <h2>Name</h2>
                     <ul>
                         {projects.map((item, index) => (
                             <li
                                 key={`${item.name}-${index}`}
-                                onClick={() => setActiveProject(item)}
+                                onClick={() => toggleModal(item)}
                             >
                                 {item.name}
                             </li>
                         ))}
                     </ul>
                 </div>
-                {/* <div className={styles.projectDetails}>
-                    <div>
-                        <h2>Details</h2>
-                        <div>{activeProject?.details}</div>
-                    </div>
-                    <div>
-                        <h2>Preview</h2>
-                        <div>{activeProject?.link}</div>
-                    </div>
-                </div> */}
             </div>
+
+            {showModal && (
+                <CustomModal handleClose={() => setShowModal(false)}>
+                    <h2>{activeProject.name}</h2>
+                    <p>{activeProject.details}</p>
+                </CustomModal>
+            )}
         </div>
     );
 };
