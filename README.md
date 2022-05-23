@@ -15,7 +15,7 @@
 - 🔧 &nbsp; Visual Studio Code | Visual Studio | Android Studio | Microsoft Office
 - 🖥 &nbsp; Figma | Adobe XD
 <br>
-<h3> <a href="shweyin.com" target="_blank" rel="noopener noreferrer">💻 My Website<a/></h3>
+<h3> <a href="https://shweyin.com" target="_blank" rel="noopener noreferrer">💻 My Website<a/></h3>
 
 
 <p align="center">
