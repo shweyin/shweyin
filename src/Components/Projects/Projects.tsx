@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import CustomModal from "../CustomModal/CustomModal";
+import Carousel from "react-material-ui-carousel";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 type project = {
     name: string;
@@ -8,6 +11,8 @@ type project = {
     startDate?: string;
     endDate?: string;
     link: string;
+    images?: string[];
+    element?: JSX.IntrinsicElements[keyof JSX.IntrinsicElements];
 };
 
 const projects: project[] = [
@@ -15,10 +20,43 @@ const projects: project[] = [
         name: "Leadership Loom",
         details: "Coming Soon...",
         link: "/",
+        images: [
+            require("../../Assets/loom.PNG"),
+            require("../../Assets/loom1.PNG"),
+            require("../../Assets/loom2.PNG"),
+            require("../../Assets/loom3.PNG"),
+            require("../../Assets/loom4.PNG"),
+        ],
     },
-    { name: "Mamacre", details: "Coming Soon...", link: "/" },
-    { name: "SACHAYS", details: "Coming Soon...", link: "/" },
-    { name: "My Portfolio", details: "Coming Soon...", link: "/" },
+    {
+        name: "Mamacre",
+        details: "Coming Soon...",
+        link: "/",
+        element: (
+            <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/xhvAVqAJ0Sw"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+        ),
+    },
+    {
+        name: "SACHAYS",
+        details: "Coming Soon...",
+        link: "/",
+        images: [
+            require("../../Assets/sachays.PNG"),
+            require("../../Assets/sachays1.PNG"),
+        ],
+    },
+    {
+        name: "My Portfolio",
+        details: "Coming Soon...",
+        link: "/",
+    },
 ];
 
 const Projects = () => {
@@ -51,7 +89,35 @@ const Projects = () => {
 
             {showModal && (
                 <CustomModal handleClose={() => setShowModal(false)}>
-                    <h2>{activeProject.name}</h2>
+                    <h2>
+                        <a href={activeProject.link}>{activeProject.name}</a>
+                    </h2>
+                    {activeProject.images && (
+                        <Carousel
+                            className={styles.carousel}
+                            autoPlay={false}
+                            navButtonsAlwaysVisible
+                            cycleNavigation
+                            animation="slide"
+                            NextIcon={<ArrowForwardIosIcon />}
+                            PrevIcon={<ArrowBackIosNewIcon />}
+                            indicatorContainerProps={{
+                                style: { margin: "20px" },
+                            }}
+                            navButtonsProps={{
+                                // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+                                style: {
+                                    backgroundColor: "transparent",
+                                },
+                            }}
+                        >
+                            {activeProject.images?.map((item, index) => (
+                                <img key={index} src={item}></img>
+                            ))}
+                        </Carousel>
+                    )}
+
+                    {activeProject.element}
                     <p>{activeProject.details}</p>
                 </CustomModal>
             )}
