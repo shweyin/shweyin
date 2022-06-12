@@ -126,7 +126,7 @@
   }
 }
 
-img {
+.spriteImg {
   height: clamp(300px, 40vw, 600px);
   border-radius: 15px;
   -o-object-fit: cover;

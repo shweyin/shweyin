@@ -53,7 +53,11 @@ const Profile = () => {
                         <div className={`${styles.name} ${styles.header}`}>
                             Shweyin Than
                         </div>
-                        <img src={Sprite} alt="Shweyin Than Character Sprite" />
+                        <img
+                            className={styles.spriteImg}
+                            src={Sprite}
+                            alt="Shweyin Than Character Sprite"
+                        />
                         <div className={styles.status}>
                             <div className={styles.hp}>
                                 HP: <span>100 / 100</span>

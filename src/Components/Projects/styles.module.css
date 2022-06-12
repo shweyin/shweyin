@@ -4,7 +4,7 @@
 }
 
 .projectPanel {
-  margin: 2em auto;
+  margin: 2em;
   max-width: 1200px;
 }
 
@@ -47,5 +47,14 @@ li:hover {
 
 .carousel {
   width: 100%;
+}
+
+.slideImg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=styles.module.css.map */

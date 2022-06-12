@@ -112,7 +112,11 @@ const Projects = () => {
                             }}
                         >
                             {activeProject.images?.map((item, index) => (
-                                <img key={index} src={item}></img>
+                                <img
+                                    className={styles.slideImg}
+                                    key={index}
+                                    src={item}
+                                ></img>
                             ))}
                         </Carousel>
                     )}
