@@ -7,8 +7,12 @@
 }
 
 .projectPanel {
-    margin: 2em;
-    max-width: 1200px;
+    margin: 2em;    
+    max-width: 1000px;
+
+    @include for-desktop-up{
+        margin: 2em auto;
+    }
     
 }
 
