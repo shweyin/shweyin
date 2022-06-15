@@ -63,4 +63,14 @@ li:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.videos {
+  min-height: 40vh;
+}
+
+@media (min-width: 600px) {
+  .videos {
+    min-height: 60vh;
+  }
+}
 /*# sourceMappingURL=styles.module.css.map */

@@ -9,25 +9,19 @@ import { scaleCorrectors } from "framer-motion/types/projection/styles/scale-cor
 const Profile = () => {
     const charInfo = [
         { label: "Name", value: "Shweyin Than" },
-        { label: "Weapon", value: "Umbrella" },
         { label: "Age", value: "24" },
-        { label: "Attack Power", value: "MAX" },
         { label: "Country", value: "Canada" },
-        { label: "Stamina", value: "32" },
         { label: "Speaks", value: "English, Japanese" },
-        { label: "Friendliness", value: "MAX" },
         {
             label: "Hobbies",
             value: "Games, Anime, Cycling, Guitar",
         },
-        { label: "Intelligence", value: "43" },
         { label: "Favourite Show", value: "Hunter x Hunter" },
-        { label: "Laziness", value: "MAX" },
+        { label: "Equipped Weapon", value: "Umbrella" },
         {
             label: "Passive Skill",
             value: "100% calm - Able to stay calm in situations of high duress",
         },
-        { label: "Wisdom", value: "66" },
     ];
 
     const skills = [
@@ -47,11 +41,14 @@ const Profile = () => {
 
     return (
         <div className={styles.profilePage}>
-            <div className={styles.top}>
+            <div className={styles.panel}>
                 <div className={styles.cardShrink}>
                     <div className={styles.character}>
-                        <div className={`${styles.name} ${styles.header}`}>
-                            Shweyin Than
+                        <div className={styles.charClass}>
+                            <span className={styles.level}>
+                                Lv. {new Date().getFullYear() - 1998}
+                            </span>
+                            Software Developer
                         </div>
                         <img
                             className={styles.spriteImg}
@@ -64,12 +61,6 @@ const Profile = () => {
                             </div>
                             <div className={styles.mp}>
                                 MP: <span>100 / 100</span>
-                            </div>
-                            <div className={styles.charClass}>
-                                <span className={styles.level}>
-                                    Lv. {new Date().getFullYear() - 1998}
-                                </span>
-                                Software Developer
                             </div>
                         </div>
                     </div>

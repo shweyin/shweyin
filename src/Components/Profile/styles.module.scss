@@ -5,13 +5,21 @@
 .profilePage {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1em;
     padding: 1.5em;
     min-height: calc(100vh - 2em);
     
 }
 
-.top {
+.name {
+    display: block;
+    font-size: 1em;
+    padding: 0.5em 0;
+    margin-right: auto;
+}
+
+.panel {
     display: flex;
     gap: 1.5em;
 
@@ -22,12 +30,17 @@
 }
 
 .spriteImg {
-    height: clamp(300px, 40vw, 600px);
+    max-height: 600px;
     border-radius: 15px;
     object-fit: cover;
+
+    @include for-tablet-landscape-down {
+        max-height: 400px;
+    }
 }
 
 .card {
+    transition: height 1s ease-out;
     @include make-card(1.5em);
     
     @include for-tablet-landscape-down {
@@ -37,11 +50,13 @@
 }
 
 .cardShrink {
-    align-self: baseline;
+    transition: height 1s ease-out;
+    align-items: center;
     @include make-card(1.5em);    
     @include for-tablet-landscape-down {
         width: calc(100% - 3em);
         justify-content: center;
+        align-self: baseline;
     }
 }
 
@@ -174,5 +189,7 @@ form {
     height: 10px;
     width: 100%;
 }
-.skillBarTitle {
+
+.status {
+    width: 100%;
 }

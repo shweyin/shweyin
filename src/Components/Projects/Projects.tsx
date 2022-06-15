@@ -17,8 +17,27 @@ type project = {
 
 const projects: project[] = [
     {
+        name: "Sonatico",
+        details:
+            "A startup working on building a platform custom built for music teachers to conduct online music lessons.",
+        link: "/",
+        element: (
+            <iframe
+                className={styles.videos}
+                width="100%"
+                height="100%"
+                src="https://drive.google.com/file/d/1vUls63qbZNCmbEAkm7MikDpTXqooL45s/preview"
+                title="Google Drive Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+        ),
+    },
+    {
         name: "Leadership Loom",
-        details: "Coming Soon...",
+        details:
+            "A corporate leadership skills assessment tool built with ReactJs, TailwindCSS, and Firebase.",
         link: "/",
         images: [
             require("../../Assets/loom.PNG"),
@@ -29,8 +48,9 @@ const projects: project[] = [
         ],
     },
     {
-        name: "Mamacre",
-        details: "Coming Soon...",
+        name: "Mamacre Entertainment Corporate Website",
+        details:
+            "A corporate website built using Wordpress and Oxygen Builder.",
         link: "/",
         element: (
             <iframe
@@ -47,7 +67,8 @@ const projects: project[] = [
     },
     {
         name: "SACHAYS",
-        details: "Coming Soon...",
+        details:
+            "A non-profit organization website built using Wordpress and Oxygen Builder",
         link: "/",
         images: [
             require("../../Assets/sachays.PNG"),
@@ -56,7 +77,7 @@ const projects: project[] = [
     },
     {
         name: "My Portfolio",
-        details: "Coming Soon...",
+        details: "The website you are looking at right now!",
         link: "/",
     },
 ];
@@ -81,8 +102,16 @@ const Projects = () => {
                             <li
                                 key={`${item.name}-${index}`}
                                 onClick={() => toggleModal(item)}
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "space-between",
+                                    cursor: "pointer",
+                                    paddingRight: "1em",
+                                }}
                             >
                                 {item.name}
+                                <ArrowForwardIosIcon />
                             </li>
                         ))}
                     </ul>

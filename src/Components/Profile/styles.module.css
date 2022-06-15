@@ -102,12 +102,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1em;
   padding: 1.5em;
   min-height: calc(100vh - 2em);
 }
 
-.top {
+.name {
+  display: block;
+  font-size: 1em;
+  padding: 0.5em 0;
+  margin-right: auto;
+}
+
+.panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +125,7 @@
 }
 
 @media (max-width: 900px) {
-  .top {
+  .panel {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -127,13 +137,21 @@
 }
 
 .spriteImg {
-  height: clamp(300px, 40vw, 600px);
+  max-height: 600px;
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+@media (max-width: 900px) {
+  .spriteImg {
+    max-height: 400px;
+  }
+}
+
 .card {
+  -webkit-transition: height 1s ease-out;
+  transition: height 1s ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,8 +170,11 @@
 }
 
 .cardShrink {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
+  -webkit-transition: height 1s ease-out;
+  transition: height 1s ease-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,6 +189,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
   }
 }
 
@@ -374,6 +397,10 @@ form input:focus {
   -webkit-animation: growWidth 2s ease-in-out;
           animation: growWidth 2s ease-in-out;
   height: 10px;
+  width: 100%;
+}
+
+.status {
   width: 100%;
 }
 /*# sourceMappingURL=styles.module.css.map */
