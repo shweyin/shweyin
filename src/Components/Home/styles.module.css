@@ -150,19 +150,27 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background: #464646;
+  border-radius: 5px;
+  padding: 0.3em 0.5em;
+}
+
+.enter:hover {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
 }
 
-.enter:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
 .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5em;
   text-decoration: none;
   color: #ffffff;
-  padding: 1em;
+  padding: .5em .7em;
 }
 
 .link:hover {
@@ -171,20 +179,20 @@
 
 @-webkit-keyframes bounce {
   0% {
-    -webkit-transform: translate(-50%, -10%);
-            transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 30%);
+            transform: translate(-50%, 30%);
     -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
   100% {
-    -webkit-transform: translate(-50%, -10%);
-            transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
@@ -192,20 +200,20 @@
 
 @keyframes bounce {
   0% {
-    -webkit-transform: translate(-50%, -10%);
-            transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 30%);
+            transform: translate(-50%, 30%);
     -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
   100% {
-    -webkit-transform: translate(-50%, -10%);
-            transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }

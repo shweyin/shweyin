@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-right: 50px;
+    margin-left: -6px; //account for stars width
     position: fixed;
 
     @include for-phone-only {

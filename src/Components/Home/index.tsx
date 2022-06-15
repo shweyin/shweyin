@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
+import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 
 import TextSwap from "../TextSwap/TextSwap";
 
@@ -80,6 +81,7 @@ const Home = () => {
                 <div className={styles.enter}>
                     <Link to="/profile" className={styles.link}>
                         Enter
+                        <KeyboardArrowDown />
                     </Link>
                 </div>
             )}

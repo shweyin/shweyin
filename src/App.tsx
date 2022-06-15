@@ -10,6 +10,9 @@ function App() {
         <HttpsRedirect>
             <div className="App">
                 <BrowserRouter>
+                    <div className="stars1"></div>
+                    <div className="stars2"></div>
+                    <div className="stars3"></div>
                     <Nav />
                     <RoutesWrapper />
                 </BrowserRouter>

@@ -114,16 +114,23 @@
     bottom: 20vh;
     left: 50%;
     transform: translateX(-50%);
-    animation: bounce 1s infinite;
+    //animation: bounce 2s infinite;
+    background:rgb(70, 70, 70);
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
     &:hover {
-        animation-play-state: paused;
+        //animation-play-state: paused;
+        animation: bounce 1s infinite;
     }
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    gap: .5em;
     text-decoration: none;
     color: $text-color;
-    padding: 1em;
+    padding: .5em .7em;
     &:hover {
         opacity: 0.5;
         
@@ -132,17 +139,17 @@
 
 @keyframes bounce {
     0% {
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, 0%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
 
     50% {
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 30%);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 
     100% {
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, 0%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
 }
