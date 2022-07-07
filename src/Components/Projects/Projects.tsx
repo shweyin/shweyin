@@ -26,8 +26,8 @@ const projects: project[] = [
                 className={styles.videos}
                 width="100%"
                 height="100%"
-                src="https://drive.google.com/file/d/1vUls63qbZNCmbEAkm7MikDpTXqooL45s/preview"
-                title="Google Drive Video"
+                src="https://www.youtube.com/embed/8E7d7DaOnYI"
+                title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -57,7 +57,7 @@ const projects: project[] = [
                 className={styles.videos}
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/xhvAVqAJ0Sw"
+                src="https://www.youtube.com/embed/JAAEYkq8nvI"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -73,6 +73,9 @@ const projects: project[] = [
         images: [
             require("../../Assets/sachays.PNG"),
             require("../../Assets/sachays1.PNG"),
+            require("../../Assets/sachays2.PNG"),
+            require("../../Assets/sachays3.PNG"),
+            require("../../Assets/sachays4.PNG"),
         ],
     },
     {
@@ -147,6 +150,7 @@ const Projects = () => {
                                     className={styles.slideImg}
                                     key={index}
                                     src={item}
+                                    alt={item}
                                 ></img>
                             ))}
                         </Carousel>
