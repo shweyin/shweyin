@@ -15,7 +15,7 @@
 - 🔧 &nbsp; Visual Studio Code | Microsoft Dynamics
 - 🖥 &nbsp; Figma
 <br>
-<h3> <a href="https://shweyin.com" target="_blank" rel="noopener noreferrer">💻 My Website<a/></h3>
+<h3> <a href="shweyin.com" target="_blank" rel="noopener noreferrer">💻 My Website<a/></h3>
 
 
 <p align="center">
