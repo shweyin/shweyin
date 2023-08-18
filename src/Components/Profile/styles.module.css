@@ -403,4 +403,9 @@ form input:focus {
 .status {
   width: 100%;
 }
+
+.detailButton {
+  background-color: rgb(97, 97, 97);
+}
+
 /*# sourceMappingURL=styles.module.css.map */
