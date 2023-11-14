@@ -4,16 +4,10 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000000e1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: rgba(0, 0, 0, 0.8823529412);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .myModal {
@@ -21,16 +15,8 @@
   margin: 2em;
   padding: 2em;
   border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid white;
-}
-/*# sourceMappingURL=styles.module.css.map */
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EAEX,WAAW,EAAE,IAAI;CAMpB;;ACKG,MAAM,EAAE,SAAS,EAAE,KAAK;EDf5B,AAAA,UAAU,CAAC;IAQH,WAAW,EAAE,CAAC;GAErB",
-    "sources": [
-        "styles.module.scss",
-        "../../Styles/_mixins.scss",
-        "../../Styles/_variables.scss"
-    ],
-    "names": [],
-    "file": "styles.module.css"
-}
+{"version":3,"sources":["styles.module.scss","styles.module.css","../../Styles/_mixins.scss"],"names":[],"mappings":"AAEA;EACI,YAAA;EACA,WAAA;EAEA,iBAAA;ACFJ;ACaI;EFfJ;IAQQ,cAAA;ECFN;AACF","file":"styles.module.css"}

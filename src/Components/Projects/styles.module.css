@@ -7,7 +7,6 @@
   margin: 2em;
   max-width: 1000px;
 }
-
 @media (min-width: 1200px) {
   .projectPanel {
     margin: 5em auto;
@@ -29,22 +28,16 @@ ul {
 }
 
 li {
-  padding: .3em 0;
+  padding: 0.3em 0;
 }
-
 li:hover {
   background-color: #484848;
   opacity: 0.5;
 }
 
 .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   display: flex;
   padding: 1.5em;
   background-color: #353535;
@@ -67,10 +60,8 @@ li:hover {
 .videos {
   min-height: 40vh;
 }
-
 @media (min-width: 600px) {
   .videos {
     min-height: 60vh;
   }
-}
-/*# sourceMappingURL=styles.module.css.map */
+}/*# sourceMappingURL=styles.module.css.map */

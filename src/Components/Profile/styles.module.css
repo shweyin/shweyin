@@ -1,12 +1,3 @@
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -15,16 +6,6 @@
     opacity: 1;
   }
 }
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -33,58 +14,20 @@
     opacity: 0;
   }
 }
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-  100% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-}
-
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
   100% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 }
-
-@-webkit-keyframes growWidth {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes growWidth {
   from {
     width: 0;
@@ -93,18 +36,10 @@
     width: 100%;
   }
 }
-
 .profilePage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   gap: 1em;
   padding: 1.5em;
   min-height: calc(100vh - 2em);
@@ -118,21 +53,13 @@
 }
 
 .panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1.5em;
 }
-
 @media (max-width: 900px) {
   .panel {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -142,7 +69,6 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 @media (max-width: 900px) {
   .spriteImg {
     max-height: 400px;
@@ -150,61 +76,39 @@
 }
 
 .card {
-  -webkit-transition: height 1s ease-out;
   transition: height 1s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 1.5em;
   background-color: #353535;
   border-radius: 5px;
 }
-
 @media (max-width: 900px) {
   .card {
     width: calc(100% - 3em);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
 .cardShrink {
-  -webkit-transition: height 1s ease-out;
   transition: height 1s ease-out;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   padding: 1.5em;
   background-color: #353535;
   border-radius: 5px;
 }
-
 @media (max-width: 900px) {
   .cardShrink {
     width: calc(100% - 3em);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
+    justify-content: center;
+    align-self: baseline;
   }
 }
 
 .character {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -214,50 +118,28 @@
 }
 
 .hp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0.5em 0;
 }
-
 .hp span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-grow: 1;
+  justify-content: center;
   margin-left: 1em;
   background-color: #ff2f2f;
   border-radius: 3px;
 }
 
 .mp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0.5em 0;
 }
-
 .mp span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-grow: 1;
+  justify-content: center;
   margin-left: 1em;
   background-color: #3a3ae1;
   border-radius: 3px;
@@ -276,55 +158,35 @@
 }
 
 .charInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
 }
 
 form {
-  display: -ms-grid;
   display: grid;
   width: 100%;
   max-width: 1200px;
   padding-bottom: 2em;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
   row-gap: 0.3em;
 }
-
 @media (max-width: 900px) {
   form {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
   }
 }
-
 form .line {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ()[auto-fit];
-      grid-template-columns: repeat(auto-fit);
+  grid-template-columns: repeat(auto-fit);
   padding: 0.5em;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 form .line label {
   padding-bottom: 0.5em;
 }
-
 form input {
   font-size: 0.8em;
   background-color: #484848;
@@ -334,12 +196,10 @@ form input {
   text-align: center;
   padding: 0.2em 0.5em;
 }
-
 form input:focus {
   outline: #9b9b9b solid 2px;
   color: #9b9b9b;
 }
-
 @media (min-width: 1200px) {
   form input {
     font-size: 1em;
@@ -347,65 +207,35 @@ form input:focus {
 }
 
 .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
 .skillBars {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .skillBarContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .skillBarWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 1em 0;
 }
 
 .skillBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-animation: growWidth 2s ease-in-out;
-          animation: growWidth 2s ease-in-out;
+  justify-content: center;
+  animation: growWidth 2s ease-in-out;
   height: 10px;
   width: 100%;
 }
 
 .status {
   width: 100%;
-}
-
-.detailButton {
-  background-color: rgb(97, 97, 97);
-}
-
-/*# sourceMappingURL=styles.module.css.map */
+}/*# sourceMappingURL=styles.module.css.map */

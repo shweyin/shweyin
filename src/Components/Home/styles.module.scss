@@ -110,6 +110,8 @@
 }
 
 .enter {
+    opacity: 0;
+    transition: opacity 1s;
     position: absolute;
     bottom: 20vh;
     left: 50%;
@@ -122,6 +124,10 @@
         //animation-play-state: paused;
         animation: bounce 1s infinite;
     }
+}
+
+.enterShow{
+    opacity: 1;
 }
 
 .link {
