@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import Sprite from "../../Assets/sprite.png";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +8,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const Profile = () => {
   const charInfo = [
     { label: "Name", value: "Shweyin Than" },
-    { label: "Age", value: "24" },
+    {
+      label: "Age",
+      value:
+        new Date() > new Date(new Date().getFullYear(), 5, 18)
+          ? new Date().getFullYear() - 1998
+          : new Date().getFullYear() - 1998 - 1,
+    },
     { label: "Country", value: "Canada" },
     { label: "Speaks", value: "English, Japanese" },
     {
@@ -45,7 +51,10 @@ const Profile = () => {
           <div className={styles.character}>
             <div className={styles.charClass}>
               <span className={styles.level}>
-                Lv. {new Date().getFullYear() - 1998}
+                Lv.
+                {new Date() > new Date(new Date().getFullYear(), 5, 18)
+                  ? new Date().getFullYear() - 1998
+                  : new Date().getFullYear() - 1998 - 1}
               </span>
               Software Developer
             </div>
@@ -84,7 +93,7 @@ const Profile = () => {
                   className={styles.skillBarContainer}
                   key={`${item.title}-${index}`}
                 >
-                  <label className={styles.skillBarTitle}>
+                  <label className="flex gap-2">
                     {item.title}
                     <button
                       onClick={() =>
@@ -140,7 +149,6 @@ const Profile = () => {
                 </div>
               ))}
             </div>
-            {/* <button className={styles.detailButton}>View Details</button> */}
           </div>
         </div>
       </div>

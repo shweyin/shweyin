@@ -1,44 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 body {
   font-family: "Orbitron", Serif;
-  color: #ffffff;
   background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
   margin: 0;
 }
-
-.App {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-@media (max-width: 599px) {
-  .App {
-    flex-direction: column;
-  }
-}
-.App ::-moz-selection {
-  background: #AFAFAF;
-}
-.App ::-webkit-selection {
-  background: #AFAFAF;
-}
-.App ::selection {
-  background: #AFAFAF;
-}
-
-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 1em;
-  cursor: pointer;
-}
-button:hover {
-  opacity: 0.5;
-}
-
 .stars1 {
   width: 1px;
   height: 1px;

@@ -173,8 +173,14 @@ form {
 
 .skillBarContainer {
     display: flex;
+    gap: 1em;
     flex-direction: column;
     flex-grow: 1;
+}
+
+.skillBarTitle {
+    display: flex;
+    gap: 0.5em;
 }
 
 .skillBarWrapper {
