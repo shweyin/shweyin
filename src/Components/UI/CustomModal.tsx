@@ -13,7 +13,7 @@ const CustomModal = ({ handleClose, children }) => {
       >
         <div
           style={{ width: "clamp(50%, 1200px, 90%)" }}
-          className=" flex flex-col gap-5 p-10 rounded-md outline outline-zinc-600 bg-black"
+          className=" flex flex-col gap-5 p-10 rounded-md outline outline-zinc-600 bg-black text-white"
           onClick={(e) => e.stopPropagation()}
         >
           {children}

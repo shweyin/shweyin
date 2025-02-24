@@ -17,6 +17,28 @@ type project = {
 
 const projects: project[] = [
   {
+    name: "Mamacre Entertainment Label Site",
+    details: "A website to showcase Mamacre Entertainment's latest albums",
+    link: "https://mamacre-label.vercel.app/",
+    images: [
+      require("../Assets/mamacreLabel.webp"),
+      require("../Assets/mamacreLabel2.webp"),
+    ],
+  },
+  {
+    name: "Leadership Loom",
+    details:
+      "A corporate leadership skills assessment tool built with ReactJs, TailwindCSS, and Firebase.",
+    link: "https://leadership-loom-demo.vercel.app/",
+    images: [
+      require("../Assets/leadershiploom.webp"),
+      require("../Assets/leadershiploom1.webp"),
+      require("../Assets/leadershiploom2.webp"),
+      require("../Assets/leadershiploom3.webp"),
+      require("../Assets/leadershiploom4.webp"),
+    ],
+  },
+  {
     name: "Play313",
     details: "A hobby project built to assist in playing the card game 313.",
     link: "https://play313.vercel.app/",
@@ -24,6 +46,23 @@ const projects: project[] = [
       require("../Assets/play313_home.webp"),
       require("../Assets/play313_board.webp"),
     ],
+  },
+  {
+    name: "Mamacre Entertainment Corporate Website",
+    details: "A corporate website built using Wordpress and Oxygen Builder.",
+    link: "https://mamacrecorp.com/",
+    element: (
+      <iframe
+        className="min-h-[40vh] md:min-h-[60vh]"
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/JAAEYkq8nvI"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     name: "Sachays",
@@ -55,45 +94,6 @@ const projects: project[] = [
         allowFullScreen
       ></iframe>
     ),
-  },
-  {
-    name: "Mamacre Entertainment Corporate Website",
-    details: "A corporate website built using Wordpress and Oxygen Builder.",
-    link: "https://mamacrecorp.com/",
-    element: (
-      <iframe
-        className="min-h-[40vh] md:min-h-[60vh]"
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/JAAEYkq8nvI"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    ),
-  },
-  {
-    name: "Leadership Loom",
-    details:
-      "A corporate leadership skills assessment tool built with ReactJs, TailwindCSS, and Firebase.",
-    link: "https://leadership-loom-demo.vercel.app/",
-    images: [
-      require("../Assets/leadershiploom.webp"),
-      require("../Assets/leadershiploom1.webp"),
-      require("../Assets/leadershiploom2.webp"),
-      require("../Assets/leadershiploom3.webp"),
-      require("../Assets/leadershiploom4.webp"),
-    ],
-  },
-  {
-    name: "Mamacre Entertainment Label Site",
-    details: "A website to showcase Mamacre Entertainment's latest albums",
-    link: "https://mamacre-label.vercel.app/",
-    images: [
-      require("../Assets/mamacreLabel.webp"),
-      require("../Assets/mamacreLabel2.webp"),
-    ],
   },
 ];
 
