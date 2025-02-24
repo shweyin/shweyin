@@ -37,7 +37,7 @@ const TextSwap = ({ text1, text2 }: TextSwapProps) => {
           <motion.span
             key={`${char}-${index}`}
             variants={letter}
-            className="text-gray-400"
+            className="text-zinc-600"
           >
             {char}
           </motion.span>

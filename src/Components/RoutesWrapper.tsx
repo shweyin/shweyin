@@ -1,12 +1,9 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from "./styles.module.css";
-//import {} from "framer-motion/dist/framer-motion";
-
-import Home from ".";
-import Profile from "./Profile/Profile";
-import Projects from "./Projects/Projects";
+import Home from "./Home";
+import Profile from "./Profile";
+import Projects from "./Projects";
 
 const RoutesWrapper = () => {
   const location = useLocation();

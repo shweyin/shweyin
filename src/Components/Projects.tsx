@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styles from "./styles.module.css";
-import CustomModal from "../CustomModal/CustomModal";
+import { useState } from "react";
+import CustomModal from "./UI/CustomModal";
 import Carousel from "react-material-ui-carousel";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Card } from "./UI/Card";
 
 type project = {
   name: string;
@@ -17,16 +17,25 @@ type project = {
 
 const projects: project[] = [
   {
+    name: "Play313",
+    details: "A hobby project built to assist in playing the card game 313.",
+    link: "https://play313.vercel.app/",
+    images: [
+      require("../Assets/play313_home.webp"),
+      require("../Assets/play313_board.webp"),
+    ],
+  },
+  {
     name: "Sachays",
     details:
       "A non-profit organization website built using Wordpress and Oxygen Builder",
     link: "https://sachays.ca/",
     images: [
-      require("../../Assets/sachays.webp"),
-      require("../../Assets/sachays1.webp"),
-      require("../../Assets/sachays2.webp"),
-      require("../../Assets/sachays3.webp"),
-      require("../../Assets/sachays4.webp"),
+      require("../Assets/sachays.webp"),
+      require("../Assets/sachays1.webp"),
+      require("../Assets/sachays2.webp"),
+      require("../Assets/sachays3.webp"),
+      require("../Assets/sachays4.webp"),
     ],
   },
   {
@@ -36,7 +45,7 @@ const projects: project[] = [
     link: "https://sonatico.com/",
     element: (
       <iframe
-        className={styles.videos}
+        className="min-h-[40vh] md:min-h-[60vh]"
         width="100%"
         height="100%"
         src="https://www.youtube.com/embed/8E7d7DaOnYI"
@@ -53,7 +62,7 @@ const projects: project[] = [
     link: "https://mamacrecorp.com/",
     element: (
       <iframe
-        className={styles.videos}
+        className="min-h-[40vh] md:min-h-[60vh]"
         width="100%"
         height="100%"
         src="https://www.youtube.com/embed/JAAEYkq8nvI"
@@ -70,11 +79,11 @@ const projects: project[] = [
       "A corporate leadership skills assessment tool built with ReactJs, TailwindCSS, and Firebase.",
     link: "https://leadership-loom-demo.vercel.app/",
     images: [
-      require("../../Assets/leadershiploom.webp"),
-      require("../../Assets/leadershiploom1.webp"),
-      require("../../Assets/leadershiploom2.webp"),
-      require("../../Assets/leadershiploom3.webp"),
-      require("../../Assets/leadershiploom4.webp"),
+      require("../Assets/leadershiploom.webp"),
+      require("../Assets/leadershiploom1.webp"),
+      require("../Assets/leadershiploom2.webp"),
+      require("../Assets/leadershiploom3.webp"),
+      require("../Assets/leadershiploom4.webp"),
     ],
   },
   {
@@ -82,8 +91,8 @@ const projects: project[] = [
     details: "A website to showcase Mamacre Entertainment's latest albums",
     link: "https://mamacre-label.vercel.app/",
     images: [
-      require("../../Assets/mamacreLabel.webp"),
-      require("../../Assets/mamacreLabel2.webp"),
+      require("../Assets/mamacreLabel.webp"),
+      require("../Assets/mamacreLabel2.webp"),
     ],
   },
 ];
@@ -98,23 +107,16 @@ const Projects = () => {
   };
 
   return (
-    <div className={styles.projectsPage}>
-      <div className={`${styles.card} ${styles.projectPanel}`}>
-        <h1>Projects</h1>
-        <div className={styles.projectList}>
-          <h2>Name</h2>
+    <div className="p-10 min-h-screen">
+      <Card className="flex flex-col max-w-[1000px] mx-auto">
+        <h1 className="text-2xl p-5">Projects</h1>
+        <div>
           <ul>
             {projects.map((item, index) => (
               <li
                 key={`${item.name}-${index}`}
                 onClick={() => toggleModal(item)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  cursor: "pointer",
-                  paddingRight: "1em",
-                }}
+                className="flex px-5 py-3 items-center justify-between cursor-pointer  hover:opacity-70 hover:bg-zinc-600"
               >
                 {item.name}
                 <ArrowForwardIosIcon />
@@ -122,18 +124,18 @@ const Projects = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </Card>
 
       {showModal && (
         <CustomModal handleClose={() => setShowModal(false)}>
-          <h2>
-            <a href={activeProject.link} target="_blank">
+          <h2 className="text-2xl">
+            <a href={activeProject.link} target="_blank" rel="noreferrer">
               {activeProject.name}
             </a>
           </h2>
           {activeProject.images && (
             <Carousel
-              className={styles.carousel}
+              className="w-full"
               autoPlay={false}
               navButtonsAlwaysVisible
               cycleNavigation
@@ -152,7 +154,7 @@ const Projects = () => {
             >
               {activeProject.images?.map((item, index) => (
                 <img
-                  className={styles.slideImg}
+                  className="max-w-full h-auto block m-auto object-cover"
                   key={index}
                   src={item}
                   alt={item}

@@ -17,16 +17,18 @@ const Home = () => {
 
   return (
     <div className="flex w-full p-0 m-0 overflow-hidden">
-      <div className="flex flex-col gap-1 w-1/2 flex-grow-[2] h-screen justify-center items-center xl:items-start  xl:pl-[5%]">
+      <div className="flex flex-col gap-1 w-1/2 flex-grow-[2] h-screen justify-center pl-[5%]">
         <span>{"<div>"}</span>
-        <TextSwap
-          text1="Hi, my name is..."
-          text2="こんにちは、僕の名前は"
-          className=""
-        />
-        <div className="text-4xl md:text-6xl ">Shweyin Than</div>
-        <div className="text-5xl md:text-7xl text-gray-600 whitespace-nowrap">
-          I build websites
+        <div className="px-5">
+          <TextSwap
+            text1="Hi, my name is..."
+            text2="こんにちは、僕の名前は"
+            className=""
+          />
+          <div className="text-4xl md:text-6xl ">Shweyin Than</div>
+          <div className="text-4xl sm:text-5xl md:text-7xl text-zinc-600 whitespace-nowrap">
+            I build websites
+          </div>
         </div>
         <span>{"</div>"}</span>
       </div>
