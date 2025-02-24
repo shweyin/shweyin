@@ -5,7 +5,7 @@ const CustomModal = ({ handleClose, children }) => {
   return ReactDOM.createPortal(
     <AnimatePresence exitBeforeEnter>
       <motion.div
-        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80"
+        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80"
         onClick={handleClose}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

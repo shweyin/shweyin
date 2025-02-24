@@ -49,7 +49,7 @@ const Profile = () => {
   return (
     <div className="flex flex-col gap-5 p-10">
       <div className="flex md:flex-row flex-col gap-5">
-        <Card>
+        <Card className="md:self-start">
           <div className="flex flex-col">
             <div className="flex gap-1 items-center">
               <span className="bg-stone-500 rounded-md px-2 py-1 text-black">
@@ -61,7 +61,7 @@ const Profile = () => {
               Software Developer
             </div>
             <img
-              className="max-h-[400px] md:max-h-[600px] object-cover"
+              className="max-w-full max-h-[600px] h-auto object-contain"
               src={Sprite}
               alt="Shweyin Than Character Sprite"
             />
